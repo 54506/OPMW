@@ -1,0 +1,91 @@
+.perks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+.perk-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    text-align: center;
+    align-items: center;
+}
+
+.perk-card__emoji {
+    font-size: 2.5rem;
+}
+
+.perk-card__title {
+    color: var(--color-neutral-900);
+}
+
+.perk-card__desc {
+    font-size: var(--text-sm);
+    color: var(--color-neutral-600);
+    line-height: var(--leading-relaxed);
+}
+
+.jobs-filters {
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.jobs-search {
+    position: relative;
+    flex: 1;
+    min-width: 220px;
+    max-width: 360px;
+}
+
+.jobs-search__icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-neutral-400);
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+}
+
+.jobs-search__input {
+    padding-left: 2.75rem !important;
+}
+
+.jobs-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.jobs-empty {
+    text-align: center;
+    padding: var(--space-12);
+    color: var(--color-neutral-500);
+}
+
+@media (max-width: 1024px) {
+    .perks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .perks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jobs-filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .jobs-search {
+        max-width: 100%;
+        width: 100%;
+    }
+}
